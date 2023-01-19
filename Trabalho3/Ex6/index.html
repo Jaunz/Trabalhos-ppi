@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="Descrição" content="Clínica ABC, conhecendo um pouco melhor nossa estrutura">
+        <link rel="stylesheet" href="style/style.css">
+        <title>Formulários em HTML</title> 
+    </head>
+
+    <body>
+        <main>
+            
+            <form action="cadastracliente.php" method="post">
+
+                <fieldset>
+                    
+                    <legend class="txtcenter"><h3>Dados Pessoais</h3></legend>
+
+                    <div>
+                        <textarea name="dadospessoais" readonly>
+                            Concluindo compra
+                        </textarea>
+
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for = "nome">Nome: </label>
+                        <input type="text" id ="nome" name="dadospessoais" placeholder="Informe o usuário" minlength="2" maxlength="50" autofocus required>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for = "email">E-mail: </label>
+                        <input type="email" id ="email" name="dadospessoais" required>
+                        <span></span>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for = "cpf">CPF: </label>
+                        <input type="tel" id ="cpf" name="dadospessoais" placeholder="xxx.xxx.xxx-xx" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+                        <span></span>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for = "idade">Idade: </label>
+                        <input type="number" id ="idade" name="dadospessoais" min="0" max="120" required>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for = "telefone">Telefone: </label>
+                        <input type="tel" id ="telefone" name="dadospessoais" placeholder="(99) 9 9999 9999" required>
+                        <span></span>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for = "datanasc">Data de nascimento: </label>
+                        <input type="date" id ="datanasc" name="dadospessoais">
+                    </div>
+
+                    <br>
+
+                    <fieldset>
+                        <legend class="txtcenter">Escolha o Sexo</legend>
+                        <div>
+                            <input type="radio" id="feminino" name="sexo" value="feminino">
+                            <label for="feminino">Feminino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="masculino" name="sexo" value="masculino">
+                            <label for="masculino">Masculino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="outrosex" name="sexo" value="outrosex">
+                            <label for="outrosex">Outro</label>
+                        </div>
+                        
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset>
+                        <legend class="txtcenter">Estado civil</legend>
+                        <div>
+                            <input type="radio" id="solteiro" name="estadocivil" value="solteiro" checked>
+                            <label for="solteiro">Solteiro</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="casado" name="estadocivil" value="casado">
+                            <label for="casado">Casado</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="divorciado" name="estadocivil" value="divorciado">
+                            <label for="divorciado">Divorciado</label>
+                        </div>
+                    </fieldset>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend class="txtcenter"><h3>Endereço de entrega</h3></legend>
+
+                    <div>
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="enderecoentrega" placeholder="xxx.xxx-xx" pattern="\d{3}.\d{3}-\d{2}" required>
+                        <span></span>
+                    </div>
+
+                    <br>
+
+                    <fieldset>
+                        <legend class="txtcenter">Tipo de logadouro</legend>
+                        <div>
+                            <input type="checkbox" id="rua" name="logradouro" value="rua" checked>
+                            <label for="rua">Rua</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="avenida" name="logradouro" value="avenida">
+                            <label for="avenida">Avenida</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="praca" name="logradouro" value="praca">
+                            <label for="praca">Praça</label>
+                        </div>
+                    </fieldset>
+
+                    <br>
+
+                    <div>
+                        
+                        <label for="logradouro">Logradouro: </label>
+                        <input type="text" id="logradouro" name="enderecoentrega"> 
+                    </div>
+                    
+                    <br>
+
+                    <div>
+                        <label for="bairro">Bairro: </label>
+                        <input type="text" id="bairro" name="enderecoentrega">
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="cidade">Cidade: </label>
+                        <input type="text" id="cidade" name="enderecoentrega">
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="estado">Estado: </label>
+                        <select id="estado" name="enderecoentrega">
+                            <option value="MG">Minas Gerais</option>
+                            <option value="GO">Goiás</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        
+                    </div>
+
+                </fieldset>
+                
+                <br>
+
+                <fieldset>
+                    <legend class="txtcenter"><h3>Informações adicionais</h3></legend>
+                    <fieldset>
+
+                        <legend class="txtcenter">Selecione as suas preferências</legend>
+
+                        <div>
+                            <input type="checkbox" id="filme" name="preferencias" value="filme">
+                            <label for="filme">Filmes</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="info" name="preferencias" value="informatica">
+                            <label for="info">Informática</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="games" name="preferencias" value="games">
+                            <label for="games">Games</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="livros" name="preferencias" value="livros">
+                            <label for="livros">Livros</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="roupas" name="preferencias" value="roupas">
+                            <label for="roupas">Roupas</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="series" name="preferencias" value="series">
+                            <label for="series">Séries</label>
+                        </div>
+
+                    </fieldset>
+
+                </fieldset>
+
+                <input type="hidden" name="dadoscliente" value="dados">
+
+                <br>
+
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+
+                <br>
+
+            </form>
+        </main>
+    </body>
+
+</html>

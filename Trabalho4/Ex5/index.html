@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Copypastas</title>
+</head>
+<body>
+    <header>
+        <section>
+            <h1>Título bonito</h1>
+        </section>
+    </header>
+    <nav>
+        <section>
+            <ul>
+                <li><button data-abaid="TABA">Principal</button>|</li>
+                <li><button data-abaid="TABB">Segundo</button>|</li>
+                <li><button data-abaid="TABC">Terceiro</button></li>
+            </ul>
+        </section>
+    </nav>
+    <main>
+        <section class="abas">
+            <section data-abaid="TABA">
+                <h2>Cangurus e o  Uruguaio</h2>
+                <p>Na Austrália há 47 milhões de cangurus e no Uruguai já 3.457.000 habitantes. Então se os cangurus decidirem invadir o Uruguai, cada uruguaio vai ter que lutar com 14 canguru.</p>
+            </section>
+            <section data-abaid="TABB">
+                <h2>Português é o único idioma em que se pode escrever um texto só com a letra P</h2>
+                <p>PODEMOS PARTIR?
+                Pedro Paulo Pereira Pinto, pequeno pintor português, pintava portas, paredes, portais. Porém, pediu para parar porque preferiu pintar panfletos. Partindo para Piracicaba, pintou prateleiras para poder progredir. Posteriormente, partiu para Pirapora. Pernoitando, prosseguiu para Paranavaí, pois pretendia praticar pinturas para pessoas pobres. Porém, pouco praticou, porque Padre Paulo pediu para pintar panelas, porém posteriormente pintou pratos para poder pagar promessas. . Pálido, porém perseverante, preferiu partir para Portugal para pedir permissão para papai para permanecer praticando pinturas, preferindo, portanto, Paris. Partindo para Paris, passou pelos Pirineus, pois pretendia pintá-los. Pareciam plácidos, porém, pesaroso, percebeu penhascos pedregosos, preferindo pintá-los parcialmente, pois perigosas pedras pareciam precipitar-se principalmente pelo Pico, porque pastores passavam pelas picadas para pedirem pousada, provocando provavelmente pequenas perfurações, pois, pelo passo percorriam, permanentemente, possantes potrancas. Pisando Paris, pediu permissão para pintar palácios pomposos, procurando pontos pitorescos, pois, para pintar pobreza, precisaria percorrer pontos perigosos, pestilentos, perniciosos, preferindo Pedro Paulo precaver-se. Profundas privações passou Pedro Paulo. Pensava poder prosseguir pintando, porém, pretas previsões passavam pelo pensamento, provocando profundos pesares, principalmente por pretender partir prontamente para Portugal. Povo previdente! Pensava Pedro Paulo… "Preciso partir para Portugal porque pedem para prestigiar patrícios, pintando principais portos portugueses". . Passando pela principal praça parisiense, partindo para Portugal, pediu para pintar pequenos pássaros pretos. Pintou, prostrou perante políticos, populares, pobres, pedintes. - "Paris! Paris!" Proferiu Pedro Paulo. -"Parto, porém penso pintá-la permanentemente, pois pretendo progredir". Pisando Portugal, Pedro Paulo procurou pelos pais, porém, Papai Procópio partira para Província. Pedindo provisões, partiu prontamente, pois precisava pedir permissão para Papai Procópio para prosseguir praticando pinturas. Profundamente pálido, perfez percurso percorrido pelo pai. Pedindo permissão, penetrou pelo portão principal. Porém, Papai Procópio puxando-o pelo pescoço proferiu: -Pediste permissão para praticar pintura, porém, praticando, pintas pior. Primo Pinduca pintou perfeitamente prima Petúnia. Porque pintas porcarias? -Papai, proferiu Pedro Paulo, pinto porque permitiste, porém preferindo, poderei procurar profissão própria para poder provar perseverança, pois pretendo permanecer por Portugal. Pegando Pedro Paulo pelo pulso, penetrou pelo patamar, procurando pelos pertences, partiu prontamente, pois pretendia pôr Pedro Paulo para praticar profissão perfeita: pedreiro! Passando pela ponte precisaram pescar para poderem prosseguir peregrinando. Primeiro, pegaram peixes pequenos, porém, passando pouco prazo, pegaram pacus, piaparas, pirarucus. Partindo pela picada próxima, pois pretendiam pernoitar pertinho, para procurar primo Péricles primeiro.</p>
+            </section>
+            <section data-abaid="TABC">
+                <h2>Como a guerra Rússia vs Ucrânia afeta o Grêmio</h2>
+                <p>4% da população brasileira torce para o Grêmio, se fomos considerar que 4% dos brasileiros na Ucrânia e na Rússia tbm são gremistas, isso equivale à 63 pessoas, agora vamos fazer uma média de quanto o Grêmio arrecada com cada gremista (bilheteria+sócios): 8.4m÷7.3m = 0,92. O Grêmio arrecada 92 centavos mensais com cada gremista, agora é só multiplicar. 0,92x63 = 57.96. Vamos levar em consideração que 20% das pessoas morrem em um guerra, então desses 64 gremistas, só sobraria 51 pessoas, agora é só fazer o cálculo: 51x0,92 = 46,92. 46,92x12 = 563,05. Resumo: com a guerra Rússia Vs Ucrânia, o Grêmio vai deixar de lucrar 563,04 Reais.</p>
+            </section>
+        </section>
+    </main>
+    <script>
+        function exibeAba(nomeDaAba){
+
+            // pega os elementos que estavam ativos antes e os "removem"
+            const ultimaAbaAtiva = document.querySelector(".abaAtiva");
+            if(ultimaAbaAtiva !== null) ultimaAbaAtiva.className = "";
+            const ultimoBotaoAtivo = document.querySelector(".botaoAtivo");
+            if(ultimoBotaoAtivo !== null) ultimoBotaoAtivo.className = "";
+
+            const query1 = ".abas > section[data-abaid='" + nomeDaAba + "']"; // cria a querry da section correspondente ao botao que foi acionado
+            const query2 = "nav button[data-abaid='" + nomeDaAba + "']"; // cria a querry do botao
+
+            document.querySelector(query1).className = "abaAtiva"; // seta a aba passada por argumento como a aba ativa atual
+            document.querySelector(query2).className = "botaoAtivo"; // seta o botao pressionado como o botao ativo
+        }
+
+        // adiciona o evento ao carregar a arvore
+                                                        // funcao anonima que exibe a primeira aba
+        document.addEventListener('DOMContentLoaded', function (){
+            let botoes = document.querySelectorAll("nav button"); // pega os botoes de navegação
+            for(let botao of botoes){
+                botao.onclick = () => exibeAba(botao.dataset.abaid); // seta para cada botao a funcao de exibir o conteudo de acordo com o nome do botao/section
+            }
+
+            exibeAba("TABA"); // exibe a primeira aba ao carregar a arvore e seta como aba ativa
+        } );
+    </script>
+</body>
+</html>

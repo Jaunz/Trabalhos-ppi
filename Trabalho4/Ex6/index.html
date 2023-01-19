@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Cadastro de Usuário</title>
+</head>
+<body>
+    <main>
+        <div class="loginBox">
+            <h3>Cadastro de usuário</h3>
+            <form action="action.php" name="formCadastro" method="post">
+                <div>
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" name="usuario" id="usuario" autocomplete="off">
+                    <span></span>
+                </div>
+    
+                <div>
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha">
+                    <span></span>
+                </div>
+    
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" autocomplete="off">
+                    <span></span>
+                </div>
+    
+                <button>Cadastrar</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // funcao de validaçao
+        function validaForm(e) {
+            let form = e.target; // captura o formulario que chamou a funcao (foi submetido)
+            let formValido = true; // seta como valido por default
+
+            // pega os spans dos elementos do formulario para exibir o aviso de campo sem preenchimento
+            const spanUsuario = form.usuario.nextElementSibling;
+            const spanPwd = form.senha.nextElementSibling;
+            const spanEmail = form.email.nextElementSibling;
+
+            // seta o conteudo dos spans como vazio
+            spanUsuario.textContent = "";
+            spanPwd.textContent = "";
+            spanEmail.textContent = "";
+
+            // verifica se os elementos do formulário foram preechidos e invalida se caso não foram
+            if(form.usuario.value === ""){
+                spanUsuario.textContent = 'Campo não preenchido';
+                formValido = false;
+            }
+            if(form.senha.value === ""){
+                spanPwd.textContent = 'Campo não preenchido';
+                formValido = false;
+            }
+            if(form.email.value === ""){
+                spanEmail.textContent = 'Campo não preenchido';
+                formValido = false;
+            }
+            return formValido; // retorna o resultado da vlaidação
+        }
+
+
+        // adiciona o evento ao carregar a arvore       // funcao anonima que seta a validacao quando o formulario for submetido 
+        document.addEventListener('DOMContentLoaded', function (){
+            document.forms.formCadastro.onsubmit = validaForm;
+        });
+    </script>
+
+</body>
+</html>

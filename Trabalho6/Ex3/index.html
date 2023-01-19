@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <main>
+        <form action="./php/cadastros.php" method="post">
+            <div>
+                <label for="user">Email:</label>
+                <input type="email" name="mail" id="mail"  required>
+            </div>
+            <div>
+                <label for="passwd">Senha:</label>
+                <input type="password" name="passwd" id="passwd" required>
+            </div>
+            <button>Cadastrar</button>
+    </main>
+</body>
+</html>

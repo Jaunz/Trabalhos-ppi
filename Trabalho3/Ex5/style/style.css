@@ -1,0 +1,39 @@
+body{
+    background-color: #ddd;
+}
+
+main{
+
+    font-size: larger;
+    background-color: #eee;
+
+    max-width: 300px;
+
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(110, 110, 110);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+input, button{
+
+    font-size: large;
+
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+
+}
+
+input:focus{
+
+    outline: none;
+    box-shadow: 0px 0px 5px rgb(110, 110, 110);
+
+}

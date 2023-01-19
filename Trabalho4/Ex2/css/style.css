@@ -1,0 +1,31 @@
+body{
+    background-color: #ddd;
+}
+
+main{
+    background-color: #FFFFFF;
+
+    width: 60%;
+    margin: 50px 400px;
+    padding: 25px 50px;
+    border-radius: 10px;
+}
+
+section:nth-child(n){
+    
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
+    line-height: 1.5;
+
+    text-align: left;
+    border-top: 2px solid rgb(202, 202, 202);
+
+    user-select: none;
+}
+
+h1, h2{
+
+    color: rgb(140, 76, 8);
+    margin-top: 3px;
+
+}

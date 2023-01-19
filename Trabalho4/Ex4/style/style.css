@@ -1,0 +1,25 @@
+
+main {
+    padding: 50px;
+    border: 1px solid gray;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+li {
+    margin: 2px;
+    padding: 2px;
+    background-color: rgb(200, 224, 233);
+    border: 1px solid rgb(99, 99, 99);
+    color: rgb(0, 0, 0);
+}
+
+li > button {
+    float: right;
+    color: red;
+    cursor: pointer;
+    border: none;
+}

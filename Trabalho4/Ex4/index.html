@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Lista de exibição</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <label for="inputInteresse">Interesse: </label>
+            <input type="text" name="inputInteresse" id="textInputID">
+        </div>
+        <ol id="listaInteresses"></ol>
+        <span></span>
+    </main>
+    <script>
+        const campoInput = document.getElementById("textInputID"); // pega o elemento de campo de input
+        const lista = document.getElementById("listaInteresses"); // pega o elemento de lista ordenada
+
+        // funcao de adicao de novo elemento
+        function addInteresseFromInput(){
+            // cria os novos elementos
+            const novoLi = document.createElement("li");
+            const novoSpan = document.createElement("span");
+            const novoBotao = document.createElement("button");
+
+            // insere valor no novo elemento da lista
+            novoSpan.textContent = campoInput.value;
+            novoBotao.textContent = '✖';
+
+            // adiciona o novo elemento na lista
+            novoLi.appendChild(novoSpan);
+            novoLi.appendChild(novoBotao);
+            lista.appendChild(novoLi);
+
+            // adiciona evento ao novo botao (funcao anonima que remove o elemento criado)
+            novoBotao.onclick = function (){
+                lista.removeChild(novoLi);
+            }
+
+            campoInput.value = '';
+        }
+
+        // funcao do evento que captura a tecla enter no elemento de input
+        function adicionaElemento(){            // arrow function que invoca a funcao de adicao de novo elemento caso usuario pressione enter
+            campoInput.addEventListener('keyup', e => {
+                if(e.key === "Enter") addInteresseFromInput();
+            })
+        }
+
+        document.addEventListener('DOMContentLoaded', adicionaElemento); // adiciona o evento de modificacao da lista ao carregar a arvore
+    </script>
+</body>
+</html>
