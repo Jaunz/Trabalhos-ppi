@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <!-- 1: Tag de responsividade -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de Cliente</title>
+
+  <!-- 2: Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <style>
+    body {
+      padding: 1rem;
+    }
+    button {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <main>
+      <form action="recebe-dados.php" method="POST" class="row g-3">
+
+        <div class="col-6">
+          <label for="cep" class="form-label">CEP</label>
+          <input type="text" name="cep" class="form-control" 
+          id="cep">
+        </div>
+        <div class="col-6">
+          <label for="endereco" class="form-label">Endereço</label>
+          <input type="text" name="endereco" class="form-control" 
+          id="endereco">
+        </div>
+
+        <div class="col-6">
+          <label for="bairro" class="form-label">Bairro</label>
+          <input type="text" name="bairro" class="form-control" 
+          id="bairro">
+        </div>
+        <div class="col-6">
+          <label for="cidade" class="form-label">Cidade</label>
+          <input type="text" name="cidade" class="form-control" 
+          id="cidade">
+        </div>
+
+        <div class="col-6">
+          <label for="estado" class="form-label">Estado</label>
+          <select name="estado" class="form-select" id="estado">
+            <option selected>Selecione</option>
+            <option value="mg">MG</option>
+            <option value="go">GO</option>
+            <option value="sp">SP</option>
+            <option value="rj">RJ</option>
+            <option value="pr">PR</option>
+            <option value="df">DF</option>
+          </select>
+        </div>
+        
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+</body>
+
+</html>
