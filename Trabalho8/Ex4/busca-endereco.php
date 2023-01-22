@@ -16,10 +16,10 @@ class Endereco
 
 function mysqlConnect()
 {
-  $db_host = "xxx";
-  $db_username = "xxx";
-  $db_password = "xxx";
-  $db_name = "xxx";
+  $db_host = "sql310.epizy.com";
+  $db_username = "epiz_32732184";
+  $db_password = "6auonfLbWOdQV24";
+  $db_name = "epiz_32732184_ppi";
 
   // dsn é apenas um acrônimo de database source name
   $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8mb4";
@@ -27,6 +27,7 @@ function mysqlConnect()
   $options = [
     PDO::ATTR_EMULATE_PREPARES => false, // desativa a execução emulada de prepared statements
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // ativa o modo de erros para lançar exceções    
+    PDO::ATTR_PERSISTENT    => true, // ativa o uso de conexões persistentes para maior eficiência
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, // altera o modo padrão do método fetch para FETCH_ASSOC
   ];
 
